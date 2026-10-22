@@ -2,7 +2,9 @@ let titulo = document.querySelector('h1');
     titulo.innerHTML = 'Jogo do Número Secreto';
 
 let paragrafo = document.querySelector('p');
-    paragrafo.innerHTML = 'Escolha um número entre 1 a 10';
+    paragrafo.innerHTML = 'Escolha um número entre 1 a 100';
+
+const valorMaximo = 100;
 
 
 let numSort = parseInt(Math.floor(Math.random() * 10)+1);
@@ -20,7 +22,7 @@ function  verificarChute() {
 
         let numEscolhido = parseInt(document.getElementById('dadosInput').value);
 
-        if (numEscolhido > 10) {
+        if (numEscolhido > valorMaximo) {
         imprimeh3.innerHTML = 'Número inválido !';
         }
     
@@ -31,7 +33,7 @@ function  verificarChute() {
                 imprime.innerHTML = 'Acertou!!!';
                 imprimeh3.innerHTML = 'Número sorteado: ' + numSort;
 
-        }else if (numEscolhido < 10) {
+        }else if (numEscolhido < valorMaximo) {
                 imprime.innerHTML = 'Errou!!!';
                 imprimeh3.innerHTML = 'Número Sorteado: ' + numSort;
             }

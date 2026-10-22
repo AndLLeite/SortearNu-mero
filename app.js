@@ -2,9 +2,9 @@ let titulo = document.querySelector('h1');
     titulo.innerHTML = 'Jogo do Número Secreto';
 
 let paragrafo = document.querySelector('p');
-    paragrafo.innerHTML = 'Escolha um número entre 1 a 100';
+    paragrafo.innerHTML = 'Escolha um número entre 1 a 50';
 
-const valorMaximo = 100;
+const valorMaximo = 50;
 
 
 let numSort = parseInt(Math.floor(Math.random() * 10)+1);

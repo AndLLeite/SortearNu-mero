@@ -4,6 +4,16 @@ let titulo = document.querySelector('h1');
 let paragrafo = document.querySelector('p');
     paragrafo.innerHTML = 'Escolha um número entre 1 a 100';
 
+if ('speechSynthesis' in window) {
+        let utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.2;
+        window.speechSynthesis.speak(utterance);
+} else {
+    console.log("Web Speech API não suportada neste navegador.");
+}
+
+
 const valorMaximo = 100;
 
 
